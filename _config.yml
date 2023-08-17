@@ -211,7 +211,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                     document.getElementById("run_time_hour"),
                     document.getElementById("run_time_minute"),
                     document.getElementById("run_time_second"),
-                    "16/08/2023 00:00:00")// 这是我第一次创建博客的时间
+                    "2023-08-16T00:00:00")// 这是我第一次创建博客的时间
                   </script>
                 </div>
               - | # 不蒜子页面统计，看不懂可不改
