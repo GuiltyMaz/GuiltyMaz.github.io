@@ -542,7 +542,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                       }'
                 ></script>
             - smart_include:
-                enable: true
+                enable: flase
               append: | # 引入live2d看板娘！不需要可以把这一项都删掉
                 <link
                   rel="stylesheet"
