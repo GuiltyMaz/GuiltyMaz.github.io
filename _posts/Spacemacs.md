@@ -1,15 +1,18 @@
-第一篇博客：解决Spacemacs安装的问题
+---
+redirect_from: /_posts/Spacemacs.md/
+title: 第一篇博客：解决Spacemacs安装的问题
+tags: Spacemacs
+---
+##设备：Windows10
 
-设备：Windows10
+##软件：Git、Powershell5、emacs
 
-软件：Git、Powershell5、emacs
-
-参考链接：https://blog.csdn.net/liweigao01/article/details/109498097
+##参考链接：https://blog.csdn.net/liweigao01/article/details/109498097
 	
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 我不喜欢这个~，所以在C盘下把~文件夹删掉了，只留下~里面的.emacs.d
 
-前置条件：
+###前置条件：
 .spacmacs.d(如果默认的话，应该是在C:\Users\Administrator\.emacs.d)中找到(defun dotspacemacs/user-init ()并在其中添加以下代码：
 (当然Administrator可以换成你电脑用户名，example:C:\Users\XXX\.emacs.d)
 (setq configuration-layer-elpa-archives
@@ -17,7 +20,7 @@ git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
       ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
       ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
       
-错误1：hl-todo、undo-tree、compat未安装
+###错误1：hl-todo、undo-tree、compat未安装
 链接：
 https://melpa.org/#/hl-todo
 https://elpa.gnu.org/packages/undo-tree.html
@@ -30,11 +33,11 @@ https://elpa.gnu.org/packages/compat.html
 (require 'undo-tree)
 (require 'compat)
 
-错误2：Source Code Pro不存在
+###错误2：Source Code Pro不存在
 
 在.spacemacs中把Source Code Pro换成Source Code Pro
 
-错误3：Non-hex digit used for Unicode escape：s(115)
+###错误3：Non-hex digit used for Unicode escape：s(115)
 
 在spacemacs上M-x -debug-init
 输出一段错误日志：
@@ -73,5 +76,7 @@ emacs
 Copy code
 (add-to-list 'load-path "C:/Users/Administrator/.emacs.d/lisp/winum")
 错误信息: Symbol's value as variable is void: configuration-layer--elpa-archives
+
+###总结
 然后，就大功告成了。（遇到问题，先看错误，再查文档。我去问别人，别人根本不搭理我，耍大牌的太多了。很多问题不是谷歌就是文档，你问别人可能要做到过年。）
 
