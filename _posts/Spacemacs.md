@@ -8,6 +8,7 @@ tags: Spacemacs
 软件：Git、Powershell5、emacs
 
 参考链接：https://blog.csdn.net/liweigao01/article/details/109498097
+	 https://blog.csdn.net/ytzys/article/details/80989421?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-80989421-blog-100057060.235%5Ev38%5Epc_relevant_anti_vip&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-80989421-blog-100057060.235%5Ev38%5Epc_relevant_anti_vip&utm_relevant_index=2
 	
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 我不喜欢这个~，所以在C盘下把~文件夹删掉了，只留下~里面的.emacs.d
