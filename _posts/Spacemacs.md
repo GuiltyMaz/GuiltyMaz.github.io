@@ -71,7 +71,7 @@ Copy code
 (add-to-list 'load-path "C:/Users/Administrator/.emacs.d/lisp/winum")
 错误信息: Symbol's value as variable is void: configuration-layer--elpa-archives
 
-###总结
+总结
 然后，就大功告成了。（遇到问题，先看错误，再查文档。我去问别人，别人根本不搭理我，耍大牌的太多了。很多问题不是谷歌就是文档，你问别人可能要做到过年。）
 ![image](https://github.com/GuiltyMaz/guiltymaz.github.io/assets/106474168/192324a2-6f0d-4021-89a5-aa2eee8c0ef5)
 
