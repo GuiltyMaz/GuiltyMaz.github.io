@@ -45,21 +45,7 @@ Debugger entered--Lisp error: (error "Non-hex character used for Unicode escape:
   read(#<buffer  *load*-595518>)
   load-with-code-conversion("c:/Users/Administrator/AppData/Roaming/.spacemacs" "c:/Users/Administrator/AppData/Roaming/.spacemacs" nil nil)
   load("c:/Users/Administrator/AppData/Roaming/.spacemacs")
-  (condition-case err (load dotspacemacs) ((debug error) (message "Error loading .spacemacs: %S" err) nil))
-  (if (condition-case err (load dotspacemacs) ((debug error) (message "Error loading .spacemacs: %S" err) nil)) nil (dotspacemacs/safe-load))
-  (if (file-exists-p dotspacemacs) (if (condition-case err (load dotspacemacs) ((debug error) (message "Error loading .spacemacs: %S" err) nil)) nil (dotspacemacs/safe-load)))
-  (let ((dotspacemacs (dotspacemacs/location))) (if (file-exists-p dotspacemacs) (if (condition-case err (load dotspacemacs) ((debug error) (message "Error loading .spacemacs: %S" err) nil)) nil (dotspacemacs/safe-load))))
-  dotspacemacs/load-file()
-  spacemacs/init()
-  (let ((please-do-not-disable-file-name-handler-alist nil)) (require 'core-spacemacs) (spacemacs/dump-restore-load-path) (configuration-layer/load-lock-file) (spacemacs/init) (configuration-layer/stable-elpa-init) (configuration-layer/load) (spacemacs-buffer/display-startup-note) (spacemacs/setup-startup-hook) (spacemacs/dump-eval-delayed-functions) (if (and dotspacemacs-enable-server (not (spacemacs-is-dumping-p))) (progn (require 'server) (if dotspacemacs-server-socket-dir (progn (setq server-socket-dir dotspacemacs-server-socket-dir))) (if (server-running-p) nil (message "Starting a server...") (server-start)))))
-  (if (not (version<= spacemacs-emacs-min-version emacs-version)) (error (concat "Your version of Emacs (%s) is too old. " "Spacemacs requires Emacs version %s or above.") emacs-version spacemacs-emacs-min-version) (let ((please-do-not-disable-file-name-handler-alist nil)) (require 'core-spacemacs) (spacemacs/dump-restore-load-path) (configuration-layer/load-lock-file) (spacemacs/init) (configuration-layer/stable-elpa-init) (configuration-layer/load) (spacemacs-buffer/display-startup-note) (spacemacs/setup-startup-hook) (spacemacs/dump-eval-delayed-functions) (if (and dotspacemacs-enable-server (not (spacemacs-is-dumping-p))) (progn (require 'server) (if dotspacemacs-server-socket-dir (progn (setq server-socket-dir dotspacemacs-server-socket-dir))) (if (server-running-p) nil (message "Starting a server...") (server-start))))))
-  load-with-code-conversion("c:/Users/Administrator/.emacs.d/init.el" "c:/Users/Administrator/.emacs.d/init.el" nil nil)
-  load-file("C:\\Users\\Administrator\\.emacs.d\\init.el")
-  load-with-code-conversion("c:/Users/Administrator/AppData/Roaming/.emacs" "c:/Users/Administrator/AppData/Roaming/.emacs" t t)
-  load("~/.emacs" noerror nomessage)
-  startup--load-user-init-file(#f(compiled-function () #<bytecode 0x22ac2fd9acbcf5c>) #f(compiled-function () #<bytecode -0x1f3c686ddc0da035>) t)
-  command-line()
-  normal-top-level()
+
   这里大概就知道自己应该是配置文件.spacemacs中出现错误，接着查了一段时间之后发现是十六进制转义的错误，接着
   根据提供的错误日志和配置代码，我看到了一些潜在的问题：
 
