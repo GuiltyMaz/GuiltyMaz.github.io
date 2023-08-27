@@ -1,6 +1,9 @@
 第一篇博客：解决Spacemacs安装的问题
+
 设备：Windows10
-软件：Git、Powershell5
+
+软件：Git、Powershell5、emacs
+
 参考链接：https://blog.csdn.net/liweigao01/article/details/109498097
 	
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
@@ -28,9 +31,11 @@ https://elpa.gnu.org/packages/compat.html
 (require 'compat)
 
 错误2：Source Code Pro不存在
+
 在.spacemacs中把Source Code Pro换成Source Code Pro
 
 错误3：Non-hex digit used for Unicode escape：s(115)
+
 在spacemacs上M-x -debug-init
 输出一段错误日志：
 Debugger entered--Lisp error: (error "Non-hex character used for Unicode escape: s (115)")
