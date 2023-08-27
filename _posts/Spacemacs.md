@@ -3,43 +3,50 @@ redirect_from: /_posts/Spacemacs.md/
 title: 第一篇博客：解决Spacemacs安装的问题
 tags: Spacemacs
 ---
-##设备：Windows10
+设备：Windows10
 
-##软件：Git、Powershell5、emacs
+软件：Git、Powershell5、emacs
 
-##参考链接：https://blog.csdn.net/liweigao01/article/details/109498097
+参考链接：https://blog.csdn.net/liweigao01/article/details/109498097
 	
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 我不喜欢这个~，所以在C盘下把~文件夹删掉了，只留下~里面的.emacs.d
 
-###前置条件：
+前置条件：
 .spacmacs.d(如果默认的话，应该是在C:\Users\Administrator\.emacs.d)中找到(defun dotspacemacs/user-init ()并在其中添加以下代码：
 (当然Administrator可以换成你电脑用户名，example:C:\Users\XXX\.emacs.d)
 (setq configuration-layer-elpa-archives
     '(("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
       ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
       ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
+
       
-###错误1：hl-todo、undo-tree、compat未安装
+错误1：hl-todo、undo-tree、compat未安装
+
 链接：
 https://melpa.org/#/hl-todo
 https://elpa.gnu.org/packages/undo-tree.html
 https://elpa.gnu.org/packages/compat.html
+
 下载解压这三个文件到C:\Users\Administrator\AppData\Roaming\.emacs.d\plugins（plugins是自建的）PS:里面的文件全部取出到plugins
 ![image](https://github.com/GuiltyMaz/guiltymaz.github.io/assets/106474168/307d2dc0-e02d-4756-97a1-1de6099f2231)
+
 在C:\Users\Administrator\.emacs.d尾部中添加这个
 (add-to-list 'load-path "C:/Users/Administrator/AppData/Roaming/.emacs.d/plugins")
 (require 'hl-todo)
 (require 'undo-tree)
 (require 'compat)
 
-###错误2：Source Code Pro不存在
+
+错误2：Source Code Pro不存在
 
 在.spacemacs中把Source Code Pro换成Source Code Pro
 
-###错误3：Non-hex digit used for Unicode escape：s(115)
+
+错误3：Non-hex digit used for Unicode escape：s(115)
 
 在spacemacs上M-x -debug-init
+
 输出一段错误日志：
 Debugger entered--Lisp error: (error "Non-hex character used for Unicode escape: s (115)")
   read(#<buffer  *load*-595518>)
