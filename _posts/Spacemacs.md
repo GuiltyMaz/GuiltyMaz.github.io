@@ -1,8 +1,11 @@
 ---
-redirect_from: /_posts/Spacemacs.md/
-title: 第一篇博客：解决Spacemacs安装的问题
-tags: Spacemacs
+layout: post
+title: Spacemacs Install Problem
+date: 2023-08-26
+categories: [blog]
+tags: [jekyll, tutorial]
 ---
+
 设备：Windows10
 
 软件：Git、Powershell5、emacs
