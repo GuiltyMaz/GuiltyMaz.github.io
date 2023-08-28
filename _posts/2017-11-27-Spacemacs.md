@@ -1,9 +1,7 @@
----
-layout: post
-title: Spacemacs Install Problem
-date: 2023-08-26
-categories: [blog]
-tags: [jekyll, tutorial]
+redirect_from: /_posts/2017-11-27-Spacemacs-install-problem/
+title: Spacemacs安装
+tags:
+  - 软件安装
 ---
 
 设备：Windows10
