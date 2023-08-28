@@ -23,27 +23,27 @@ git clone https://github.com/syl20bnr/spacemacs \~//.emacs.d
 
 (当然Administrator可以换成你电脑用户名，example:C:\Users\XXX\.emacs.d)<br />
 
-(setq configuration-layer-elpa-archives
-    '(("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
-      ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
-      ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
+(setq configuration-layer-elpa-archives<br />
+    '(("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")<br />
+      ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")<br />
+      ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))<br />
 
       
 ###错误1：hl-todo、undo-tree、compat未安装<br />
 
 链接：<br />
-[hl-todo][https://melpa.org/#/hl-todo]
-[undo-tree][https://elpa.gnu.org/packages/undo-tree.html]
-[compat][https://elpa.gnu.org/packages/compat.html]
+[hl-todo][https://melpa.org/#/hl-todo]<br />
+[undo-tree][https://elpa.gnu.org/packages/undo-tree.html]<br />
+[compat][https://elpa.gnu.org/packages/compat.html]<br />
 
 下载解压这三个文件到C:\Users\Administrator\AppData\Roaming\.emacs.d\plugins（plugins是自建的）<br />
 ![image](https://github.com/GuiltyMaz/guiltymaz.github.io/assets/106474168/307d2dc0-e02d-4756-97a1-1de6099f2231)
 
 在C:\Users\Administrator\.emacs.d尾部中添加这个<br />
-(add-to-list 'load-path "C:/Users/Administrator/AppData/Roaming/.emacs.d/plugins")
-(require 'hl-todo)
-(require 'undo-tree)
-(require 'compat)
+(add-to-list 'load-path "C:/Users/Administrator/AppData/Roaming/.emacs.d/plugins")<br />
+(require 'hl-todo)<br />
+(require 'undo-tree)<br />
+(require 'compat)<br />
 
 
 ###错误2：Source Code Pro不存在<br />
@@ -56,22 +56,22 @@ git clone https://github.com/syl20bnr/spacemacs \~//.emacs.d
 在spacemacs上M-x -debug-init<br />
 
 输出一段错误日志：<br />
-Debugger entered--Lisp error: (error "Non-hex character used for Unicode escape: s (115)")
-  read(#<buffer  *load*-595518>)
-  load-with-code-conversion("c:/Users/Administrator/AppData/Roaming/.spacemacs" "c:/Users/Administrator/AppData/Roaming/.spacemacs" nil nil)
-  load("c:/Users/Administrator/AppData/Roaming/.spacemacs")
+Debugger entered--Lisp error: (error "Non-hex character used for Unicode escape: s (115)")<br />
+  read(#<buffer  *load*-595518>)<br />
+  load-with-code-conversion("c:/Users/Administrator/AppData/Roaming/.spacemacs" "c:/Users/Administrator/AppData/Roaming/.spacemacs" nil nil)<br />
+  load("c:/Users/Administrator/AppData/Roaming/.spacemacs")<br />
 
-  这里大概就知道自己应该是配置文件.spacemacs中出现错误，接着查了一段时间之后发现是十六进制转义的错误，接着
-  根据提供的错误日志和配置代码，我看到了一些潜在的问题：<br/>
+这里大概就知道自己应该是配置文件.spacemacs中出现错误，接着查了一段时间之后发现是十六进制转义的错误，接着
+根据提供的错误日志和配置代码，我看到了一些潜在的问题：<br/>
 
 错误信息: Symbol’s value as variable is void: path
 
 在你的配置中，有一处代码是错误的：
 
-emacs
-Copy code
-(add-to-list 'load path "C:\Users\Administrator\.emacs.d\lisp\winum")
-正确的代码应该是使用 load-path 变量来添加路径，而不是使用未定义的 path 变量。此外，Windows 路径需要使用反斜杠 \\ 来表示。你可以修改为：
+emacs<br />
+Copy code<br />
+(add-to-list 'load path "C:\Users\Administrator\.emacs.d\lisp\winum")<br />
+正确的代码应该是使用 load-path 变量来添加路径，而不是使用未定义的 path 变量。此外，Windows 路径需要使用反斜杠 \\ 来表示。你可以修改为：<br />
 
 emacs
 Copy code
