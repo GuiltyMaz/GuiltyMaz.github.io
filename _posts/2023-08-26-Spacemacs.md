@@ -34,7 +34,7 @@ https://melpa.org/#/hl-todo
 https://elpa.gnu.org/packages/undo-tree.html
 https://elpa.gnu.org/packages/compat.html
 
-下载解压这三个文件到C:\Users\Administrator\AppData\Roaming\.emacs.d\plugins（plugins是自建的）PS:里面的文件全部取出到plugins
+下载解压这三个文件到C:\Users\Administrator\AppData\Roaming\.emacs.d\plugins（plugins是自建的）
 ![image](https://github.com/GuiltyMaz/guiltymaz.github.io/assets/106474168/307d2dc0-e02d-4756-97a1-1de6099f2231)
 
 在C:\Users\Administrator\.emacs.d尾部中添加这个
