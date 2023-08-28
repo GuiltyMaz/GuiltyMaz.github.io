@@ -772,10 +772,3 @@ kramdown: # 见<https://kramdown.gettalong.org/options.html>
 #  math_engine: mathjax
 #  syntax_highlighter: rouge
 
-backgrounds_images:
-  - "/images/backgrounds/background1.jpg"
-  - "/images/backgrounds/background2.jpg"
-  - "/images/backgrounds/background3.jpg"
-  - "/images/backgrounds/background4.jpg"
-  - "/images/backgrounds/background5.jpeg"
-  # 添加更多图片路径
