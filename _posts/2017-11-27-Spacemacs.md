@@ -1,3 +1,4 @@
+---
 redirect_from: /_posts/2017-11-27-Spacemacs-install-problem/
 title: Spacemacs安装
 tags:
