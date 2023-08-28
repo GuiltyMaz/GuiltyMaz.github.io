@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Background</title>
+  <style>
+    .bg-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      transition: background-image 1s;
+    }
+  </style>
+</head>
+<body>
+  <!-- 页面内容 -->
+  <div class="bg-container"></div>
+  <script>
+    const backgroundImages = [
+     "/assets/images/backgrounds/background1.jpg",
+     "/assets/images/backgrounds/background2.jpg",
+     "/assets/images/backgrounds/background3.jpg",
+     "/assets/images/backgrounds/background4.jpg",
+  -  "/assets/images/backgrounds/background5.jpeg"
+    ];
+    
+    const bgContainer = document.querySelector(".bg-container");
+    
+    function changeBackground() {
+      const randomIndex = Math.floor(Math.random() * backgroundImages.length);
+      bgContainer.style.backgroundImage = `url(${backgroundImages[randomIndex]})`;
+    }
+    
+    // 初始加载和定时切换背景图片
+    changeBackground();
+    setInterval(changeBackground, 600000); // 每隔10秒切换一次
+  </script>
+</body>
+</html>
 
