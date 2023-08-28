@@ -1,5 +1,5 @@
 ---
-redirect_from: /_posts/2023-8-26-Spacemacs/
+redirect_from: /_posts/2023-08-26-Spacemacs/
 title: Spacemacs安装
 tags:
   - 软件安装
