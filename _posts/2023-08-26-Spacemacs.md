@@ -16,7 +16,7 @@ tags:
 git clone https://github.com/syl20bnr/spacemacs \~//.emacs.d
 
 
-~我不喜欢这个\~/，所以在C盘下把~文件夹删掉了，只留下\~/里面的.emacs.d~
+~我不喜欢这个\~/，所以在C盘下把~文件夹删掉了，~只留下\~/里面的.emacs.d
 
 ##前置条件：<br />
 .spacmacs.d(如果默认的话，应该是在C:\Users\Administrator\.emacs.d)中找到(defun dotspacemacs/user-init ()并在其中添加以下代码：
